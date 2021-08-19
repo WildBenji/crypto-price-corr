@@ -32,7 +32,11 @@ import yfinance
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app = dash.Dash(
+    __name__, 
+    external_stylesheets=external_stylesheets,
+    suppress_callback_exceptions=True
+    )
 
 app.title = "Crypto values and correlations"
 
@@ -59,7 +63,7 @@ app.layout = html.Div(children=[
         ),
 
     dcc.Markdown('''
-    ###### App created by [Benjamin Baret](https://www.linkedin.com/in/benjamin-baret-6957471bb), code availabe [here]()
+    ###### App created by [Benjamin Baret](https://www.linkedin.com/in/benjamin-baret-6957471bb), code availabe [here](https://github.com/WildBenji/crypto-price-corr)
     ''', style={'text-align':'center'}),
 
     dcc.Dropdown(
