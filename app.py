@@ -34,6 +34,8 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
+app.title = "Crypto values and correlations"
+
 server = app.server
 
 _crypto_dic = {
