@@ -25,7 +25,7 @@ from dash.exceptions import PreventUpdate
 
 ###################################
 
-import yfinance 
+import yfinance
 
 ###################################
 
